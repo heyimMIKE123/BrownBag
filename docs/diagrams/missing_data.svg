@@ -1,0 +1,150 @@
+<svg viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+      .level1-box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .level2-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .decision { fill: #fff9c4; stroke: #f9a825; stroke-width: 2; }
+      .action { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .check { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .body-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="title-text" text-anchor="middle" font-size="18">Preliminary Analyses: Missing Data Analysis</text>
+  
+  <!-- Step 1: Assess Missing Data -->
+  <rect x="250" y="60" width="500" height="80" class="box" rx="5"/>
+  <text x="500" y="85" class="title-text" text-anchor="middle">Step 1: Assess Missing Data Patterns</text>
+  <text x="500" y="105" class="body-text" text-anchor="middle">Calculate proportion of missing values</text>
+  <text x="500" y="125" class="small-text" text-anchor="middle">Separately for Level 1 (outcomes) and Level 2 (predictors)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 140 L 500 170" class="arrow"/>
+  
+  <!-- Level 1 Branch -->
+  <rect x="50" y="170" width="400" height="120" class="level1-box" rx="5"/>
+  <text x="250" y="195" class="title-text" text-anchor="middle">Level 1: Performance Scores</text>
+  <text x="250" y="215" class="body-text" text-anchor="middle">(Outcome Variable)</text>
+  <text x="250" y="238" class="small-text" text-anchor="middle">Monitor proportion of missing values</text>
+  <text x="250" y="255" class="small-text" text-anchor="middle">Acceptable limit: &lt;5% of total observations</text>
+  <text x="250" y="272" class="small-text" text-anchor="middle" font-weight="bold">Use FIML estimation (handles naturally)</text>
+  
+  <!-- Arrow from Level 1 -->
+  <path d="M 250 290 L 250 420 L 400 420" class="arrow"/>
+  
+  <!-- Level 2 Branch -->
+  <rect x="550" y="170" width="400" height="120" class="level2-box" rx="5"/>
+  <text x="750" y="195" class="title-text" text-anchor="middle">Level 2: Predictors</text>
+  <text x="750" y="215" class="body-text" text-anchor="middle">(Conscientiousness, Exploratory Variables)</text>
+  <text x="750" y="238" class="small-text" text-anchor="middle">Assess proportion and pattern of missingness</text>
+  <text x="750" y="255" class="small-text" text-anchor="middle">Note: Cognitive ability missing = incorrect</text>
+  <text x="750" y="272" class="small-text" text-anchor="middle">(not imputed; scored as 0)</text>
+  
+  <!-- Arrow from Level 2 to decision -->
+  <path d="M 750 290 L 750 360" class="arrow"/>
+  
+  <!-- Decision Diamond 1: Missingness > 5% -->
+  <polygon points="750,360 900,420 750,480 600,420" class="decision"/>
+  <text x="750" y="410" class="body-text" text-anchor="middle">Missingness</text>
+  <text x="750" y="430" class="body-text" text-anchor="middle">&gt; 5%?</text>
+  
+  <!-- No path from first decision -->
+  <path d="M 600 420 L 400 420" class="arrow"/>
+  <text x="570" y="415" class="body-text">No</text>
+  <text x="470" y="415" class="small-text">(Acceptable)</text>
+  
+  <!-- Yes path to second decision -->
+  <path d="M 750 480 L 750 540" class="arrow"/>
+  <text x="720" y="510" class="body-text">Yes</text>
+  
+  <!-- Decision Diamond 2: MAR/MCAR? -->
+  <polygon points="750,540 900,600 750,660 600,600" class="decision"/>
+  <text x="750" y="590" class="body-text" text-anchor="middle">Pattern consistent</text>
+  <text x="750" y="610" class="body-text" text-anchor="middle">with MAR/MCAR?</text>
+  
+  <!-- Yes path - Impute -->
+  <path d="M 900 600 L 950 600 L 950 760" class="arrow"/>
+  <text x="920" y="595" class="body-text">Yes</text>
+  
+  <rect x="750" y="760" width="400" height="140" class="action" rx="5"/>
+  <text x="950" y="785" class="title-text" text-anchor="middle">Multilevel Multiple Imputation</text>
+  <text x="950" y="808" class="small-text" text-anchor="middle">• Accounts for nested data structure</text>
+  <text x="950" y="825" class="small-text" text-anchor="middle">• Include all analysis variables in imputation</text>
+  <text x="950" y="842" class="small-text" text-anchor="middle">• Supports MAR assumption plausibility</text>
+  <text x="950" y="859" class="small-text" text-anchor="middle">• Generate multiple imputed datasets</text>
+  <text x="950" y="876" class="body-text" text-anchor="middle" font-weight="bold">Compare to listwise deletion results</text>
+  <text x="950" y="893" class="small-text" text-anchor="middle" font-style="italic">(Report substantive differences)</text>
+  
+  <!-- Arrow from imputation to convergence -->
+  <path d="M 950 900 L 950 1000 L 500 1000 L 500 1030" class="arrow"/>
+  
+  <!-- No path - Report concern -->
+  <path d="M 600 600 L 400 600 L 400 760" class="arrow"/>
+  <text x="570" y="595" class="body-text">No</text>
+  
+  <rect x="200" y="760" width="400" height="100" class="action" rx="5" style="fill: #ffebee; stroke: #c62828;"/>
+  <text x="400" y="785" class="title-text" text-anchor="middle" style="fill: #c62828;">Missingness May Be Problematic</text>
+  <text x="400" y="808" class="small-text" text-anchor="middle">• Document pattern and extent</text>
+  <text x="400" y="825" class="small-text" text-anchor="middle">• Consider sensitivity analyses</text>
+  <text x="400" y="842" class="small-text" text-anchor="middle">• Report as limitation</text>
+  <text x="400" y="859" class="small-text" text-anchor="middle">• Proceed with caution (listwise deletion)</text>
+  
+  <!-- Arrow from concern to convergence -->
+  <path d="M 400 860 L 400 1000 L 500 1000 L 500 1030" class="arrow"/>
+  
+  <!-- Convergence point from "No missingness > 5%" -->
+  <rect x="200" y="420" width="400" height="80" class="check" rx="5"/>
+  <text x="400" y="445" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Missingness Acceptable</text>
+  <text x="400" y="468" class="body-text" text-anchor="middle" style="fill: #2e7d32;">Level 1: FIML handles naturally</text>
+  <text x="400" y="488" class="body-text" text-anchor="middle" style="fill: #2e7d32;">Level 2: &lt;5%, no action needed</text>
+  
+  <!-- Arrow from acceptable to final step -->
+  <path d="M 400 500 L 400 1000 L 500 1000 L 500 1030" class="arrow"/>
+  
+  <!-- Final transparency step -->
+  <rect x="200" y="1030" width="600" height="100" class="box" rx="5"/>
+  <text x="500" y="1055" class="title-text" text-anchor="middle">Step 2: Document and Report</text>
+  <text x="500" y="1078" class="small-text" text-anchor="middle">• Report proportion and pattern of missingness</text>
+  <text x="500" y="1095" class="small-text" text-anchor="middle">• Describe missing data handling approach</text>
+  <text x="500" y="1112" class="small-text" text-anchor="middle">• If imputation used: compare imputed vs. listwise results</text>
+  
+  <!-- Arrow to end -->
+  <path d="M 500 1130 L 500 1180" class="arrow"/>
+  
+  <!-- End box -->
+  <rect x="300" y="1180" width="400" height="60" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="500" y="1205" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Proceed to ICC Calculation</text>
+  <text x="500" y="1225" class="title-text" text-anchor="middle" style="fill: #2e7d32;">&amp; Random Effects Structure</text>
+  
+  <!-- Legend -->
+  <text x="50" y="1290" class="body-text" font-weight="bold">Legend:</text>
+  <rect x="50" y="1300" width="30" height="20" class="level1-box"/>
+  <text x="85" y="1315" class="small-text">Level 1</text>
+  <rect x="150" y="1300" width="30" height="20" class="level2-box"/>
+  <text x="185" y="1315" class="small-text">Level 2</text>
+  <rect x="250" y="1300" width="30" height="20" class="decision"/>
+  <text x="285" y="1315" class="small-text">Decision</text>
+  <rect x="370" y="1300" width="30" height="20" class="action"/>
+  <text x="405" y="1315" class="small-text">Action</text>
+  <rect x="490" y="1300" width="30" height="20" class="check"/>
+  <text x="525" y="1315" class="small-text">Acceptable</text>
+  
+  <!-- Key Information Box -->
+  <rect x="50" y="1340" width="900" height="130" style="fill: #fafafa; stroke: #bdbdbd; stroke-width: 1;" rx="3"/>
+  <text x="70" y="1360" class="small-text" font-weight="bold">Key Assumptions &amp; References:</text>
+  <text x="70" y="1378" class="small-text">• FIML (Level 1): Less biased than listwise deletion under MCAR and MAR conditions (Enders, 2022)</text>
+  <text x="70" y="1393" class="small-text">• Acceptable missingness threshold: &lt;5% (Garson, 2023)</text>
+  <text x="70" y="1408" class="small-text">• Multilevel multiple imputation: Properly accounts for nested structure (Enders, 2022; Grund et al., 2018)</text>
+  <text x="70" y="1423" class="small-text">• MAR assumption: Cannot be directly verified but plausible when missingness relates to observed variables</text>
+  <text x="70" y="1438" class="small-text">  (Enders, 2022; Garson, 2023; Snijders &amp; Bosker, 2011)</text>
+  <text x="70" y="1453" class="small-text">• Transparency: Compare imputed vs. listwise deletion results (Garson, 2015; Snijders &amp; Bosker, 2012)</text>
+</svg>
