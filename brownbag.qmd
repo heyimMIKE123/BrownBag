@@ -14,6 +14,9 @@ title-slide-attributes:
   data-background-image: images/doggie.png
   data-background-size: 35%
   data-background-position: bottom right
+project:
+  type: website
+  output-dir: docs
 
 editor: visual
 bibliography: ["references.bib", "References/references.bib", "References/military.bib", "References/other_occupations.bib", "References/gamification.bib", "References/howard.bib", "References/medical.bib", "References/assessments.bib", "References/novelty.bib", "References/prelims.bib", "References/prelims_articles.bib"]
