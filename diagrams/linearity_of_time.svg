@@ -1,0 +1,149 @@
+<svg viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+      .model-box { fill: #e1f5fe; stroke: #0277bd; stroke-width: 2; }
+      .visual-box { fill: #fce4ec; stroke: #c2185b; stroke-width: 2; }
+      .compare-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .decision { fill: #fff9c4; stroke: #f9a825; stroke-width: 2; }
+      .result { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .body-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="title-text" text-anchor="middle" font-size="18">Preliminary Analyses: Linearity of Time Effects</text>
+  
+  <!-- Step 1: Fit Linear Model -->
+  <rect x="200" y="60" width="600" height="100" class="model-box" rx="5"/>
+  <text x="500" y="85" class="title-text" text-anchor="middle">Step 1: Fit Linear Time Model</text>
+  <text x="500" y="108" class="body-text" text-anchor="middle">Model 1: Y = β₀ + β₁(Time) + error</text>
+  <text x="500" y="128" class="small-text" text-anchor="middle">Establish baseline with linear effect only</text>
+  <text x="500" y="145" class="small-text" text-anchor="middle" font-weight="bold">Estimate using ML (for model comparison)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 160 L 500 190" class="arrow"/>
+  
+  <!-- Step 2: Fit Quadratic Model -->
+  <rect x="200" y="190" width="600" height="100" class="model-box" rx="5"/>
+  <text x="500" y="215" class="title-text" text-anchor="middle">Step 2: Fit Quadratic Time Model</text>
+  <text x="500" y="238" class="body-text" text-anchor="middle">Model 2: Y = β₀ + β₁(Time) + β₂(Time²) + error</text>
+  <text x="500" y="258" class="small-text" text-anchor="middle">Test for curvilinear learning trajectories (rapid initial gains, plateau)</text>
+  <text x="500" y="275" class="small-text" text-anchor="middle" font-weight="bold">Estimate using ML (for model comparison)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 290 L 500 320" class="arrow"/>
+  
+  <!-- Step 3: Visual Inspection -->
+  <rect x="200" y="320" width="600" height="100" class="visual-box" rx="5"/>
+  <text x="500" y="345" class="title-text" text-anchor="middle">Step 3: Visual Inspection</text>
+  <text x="500" y="368" class="small-text" text-anchor="middle">Create scatterplots of performance across trials:</text>
+  <text x="500" y="385" class="small-text" text-anchor="middle">• Aggregate level (all participants combined)</text>
+  <text x="500" y="402" class="small-text" text-anchor="middle">• Random sample of individual participants</text>
+  <text x="500" y="419" class="body-text" text-anchor="middle" font-style="italic">Assess whether trajectories appear linear or curvilinear</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 420 L 500 450" class="arrow"/>
+  
+  <!-- Step 4: Compare Models -->
+  <rect x="200" y="450" width="600" height="120" class="compare-box" rx="5"/>
+  <text x="500" y="475" class="title-text" text-anchor="middle">Step 4: Compare Model Fit</text>
+  <text x="500" y="498" class="small-text" text-anchor="middle">• Likelihood Ratio Test (LRT): χ² test, p less than .05?</text>
+  <text x="500" y="515" class="small-text" text-anchor="middle">• Akaike Information Criterion: ΔAIC greater than 2?</text>
+  <text x="500" y="532" class="small-text" text-anchor="middle">• Bayesian Information Criterion: ΔBIC greater than 2?</text>
+  <text x="500" y="552" class="body-text" text-anchor="middle" font-style="italic">Lower AIC/BIC indicates better fit</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 570 L 500 610" class="arrow"/>
+  
+  <!-- Decision: Quadratic Improves Fit? -->
+  <polygon points="500,610 700,680 500,750 300,680" class="decision"/>
+  <text x="500" y="665" class="body-text" text-anchor="middle">Quadratic term</text>
+  <text x="500" y="685" class="body-text" text-anchor="middle">significantly improves fit?</text>
+  <text x="500" y="705" class="small-text" text-anchor="middle">(LRT p less than .05 OR ΔAIC/BIC greater than 2)</text>
+  
+  <!-- Yes path -->
+  <path d="M 700 680 L 800 680 L 800 820" class="arrow"/>
+  <text x="750" y="675" class="body-text">Yes</text>
+  
+  <rect x="600" y="820" width="400" height="140" class="result" rx="5"/>
+  <text x="800" y="845" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Retain Quadratic Effect</text>
+  <text x="800" y="868" class="body-text" text-anchor="middle" style="fill: #2e7d32;">Performance trajectories are curvilinear</text>
+  <text x="800" y="891" class="small-text" text-anchor="middle">Include both Time and Time² in all subsequent models</text>
+  <text x="800" y="908" class="body-text" text-anchor="middle" font-weight="bold">IMPORTANT: Model quadratic as FIXED effect only</text>
+  <text x="800" y="928" class="small-text" text-anchor="middle" font-style="italic">(No random slope for Time² - maintains parsimony</text>
+  <text x="800" y="945" class="small-text" text-anchor="middle" font-style="italic">and ensures stable convergence)</text>
+  
+  <!-- Arrow from yes to final -->
+  <path d="M 800 960 L 800 1100 L 500 1100 L 500 1130" class="arrow"/>
+  
+  <!-- No path -->
+  <path d="M 300 680 L 200 680 L 200 820" class="arrow"/>
+  <text x="270" y="675" class="body-text">No</text>
+  
+  <rect x="0" y="820" width="400" height="100" class="result" rx="5"/>
+  <text x="200" y="845" class="title-text" text-anchor="middle">Use Linear Model</text>
+  <text x="200" y="868" class="body-text" text-anchor="middle">Performance trajectories are linear</text>
+  <text x="200" y="891" class="small-text" text-anchor="middle">Include only Time (no Time²) in subsequent models</text>
+  <text x="200" y="908" class="small-text" text-anchor="middle" font-style="italic">Simpler model is more parsimonious</text>
+  
+  <!-- Arrow from no to final -->
+  <path d="M 200 920 L 200 1100 L 500 1100 L 500 1130" class="arrow"/>
+  
+  <!-- Final Documentation Step -->
+  <rect x="200" y="1130" width="600" height="100" class="box" rx="5"/>
+  <text x="500" y="1155" class="title-text" text-anchor="middle">Step 5: Document Functional Form Decision</text>
+  <text x="500" y="1178" class="small-text" text-anchor="middle">• Report model comparison results (LRT, AIC, BIC)</text>
+  <text x="500" y="1195" class="small-text" text-anchor="middle">• Include scatterplots showing visual evidence</text>
+  <text x="500" y="1212" class="small-text" text-anchor="middle">• Specify functional form used in subsequent analyses</text>
+  
+  <!-- Arrow to end -->
+  <path d="M 500 1230 L 500 1280" class="arrow"/>
+  
+  <!-- End box -->
+  <rect x="250" y="1280" width="500" height="60" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="500" y="1305" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Proceed to Distributional</text>
+  <text x="500" y="1325" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Assumptions Testing</text>
+  
+  <!-- Side info box - Why ML -->
+  <rect x="50" y="60" width="130" height="100" style="fill: #e1f5fe; stroke: #0277bd; stroke-width: 1;" rx="3"/>
+  <text x="115" y="80" class="small-text" text-anchor="middle" font-weight="bold">Why ML?</text>
+  <text x="60" y="100" class="small-text">ML required for</text>
+  <text x="60" y="115" class="small-text">comparing models</text>
+  <text x="60" y="130" class="small-text">with different</text>
+  <text x="60" y="145" class="small-text">fixed effects</text>
+  
+  <!-- Side info box - Learning Context -->
+  <rect x="820" y="190" width="130" height="100" style="fill: #fff9c4; stroke: #f9a825; stroke-width: 1;" rx="3"/>
+  <text x="885" y="210" class="small-text" text-anchor="middle" font-weight="bold">Learning Context:</text>
+  <text x="830" y="230" class="small-text">Rapid initial gains</text>
+  <text x="830" y="245" class="small-text">followed by plateau</text>
+  <text x="830" y="260" class="small-text">suggests quadratic</text>
+  <text x="830" y="275" class="small-text">trajectories likely</text>
+  
+  <!-- Side info box - Fit Criteria -->
+  <rect x="820" y="450" width="130" height="120" style="fill: #fff3e0; stroke: #f57c00; stroke-width: 1;" rx="3"/>
+  <text x="885" y="470" class="small-text" text-anchor="middle" font-weight="bold">Fit Criteria:</text>
+  <text x="830" y="490" class="small-text">LRT: p less than .05</text>
+  <text x="830" y="508" class="small-text">ΔAIC greater than 2</text>
+  <text x="830" y="526" class="small-text">ΔBIC greater than 2</text>
+  <line x1="830" y1="538" x2="940" y2="538" stroke="#f57c00" stroke-width="0.5"/>
+  <text x="830" y="553" class="small-text" font-style="italic">Lower values =</text>
+  <text x="830" y="566" class="small-text" font-style="italic">better fit</text>
+  
+  <!-- References footer -->
+  <rect x="50" y="1360" width="900" height="100" style="fill: #fafafa; stroke: #bdbdbd; stroke-width: 1;" rx="3"/>
+  <text x="70" y="1380" class="small-text" font-weight="bold">Key Considerations:</text>
+  <text x="70" y="1398" class="small-text">• ML estimation: Required for comparing models with different fixed effects (vs. REML for random effects)</text>
+  <text x="70" y="1413" class="small-text">• Visual inspection: Supplements formal tests and helps identify aggregate vs. individual-level patterns</text>
+  <text x="70" y="1428" class="small-text">• Quadratic as fixed effect only: Modeling Time² as random would require estimating additional variance components</text>
+  <text x="70" y="1443" class="small-text">  and covariances, potentially causing convergence issues with available sample size. Fixed effect captures</text>
+  <text x="70" y="1458" class="small-text">  average curvilinear trajectory while maintaining model parsimony.</text>
+</svg>

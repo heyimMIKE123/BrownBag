@@ -1,0 +1,154 @@
+<svg viewBox="0 0 1100 1250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+      .level1-box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .level2-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .decision { fill: #fff9c4; stroke: #f9a825; stroke-width: 2; }
+      .action { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .note-box { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .body-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="550" y="30" class="title-text" text-anchor="middle" font-size="18">Preliminary Analyses: Random Effects Structure</text>
+  
+  <!-- Why REML box (top left) -->
+  <rect x="80" y="60" width="180" height="80" class="level1-box" rx="5"/>
+  <text x="170" y="80" class="body-text" text-anchor="middle" font-weight="bold">Why REML?</text>
+  <text x="170" y="100" class="small-text" text-anchor="middle">REML produces</text>
+  <text x="170" y="115" class="small-text" text-anchor="middle">unbiased estimates of</text>
+  <text x="170" y="130" class="small-text" text-anchor="middle">variance components</text>
+
+  <!-- Step 1: Random Intercepts Only -->
+  <rect x="300" y="60" width="500" height="90" class="level1-box" rx="5"/>
+  <text x="550" y="85" class="title-text" text-anchor="middle">Step 1: Fit Random Intercepts Only Model</text>
+  <text x="550" y="107" class="body-text" text-anchor="middle">Model 1: Y = (β₀ + u₀ⱼ) + r_ij</text>
+  <text x="550" y="125" class="small-text" text-anchor="middle">Each participant has own baseline performance level</text>
+  <text x="550" y="142" class="small-text" text-anchor="middle" font-weight="bold">Estimate using REML</text>
+  
+  <!-- Arrow down -->
+  <path d="M 550 150 L 550 180" class="arrow"/>
+  
+  <!-- Step 2: Random Intercepts + Slopes -->
+  <rect x="300" y="180" width="500" height="110" class="level1-box" rx="5"/>
+  <text x="550" y="205" class="title-text" text-anchor="middle">Step 2: Fit Random Intercepts + Slopes Model</text>
+  <text x="550" y="227" class="body-text" text-anchor="middle">Model 2: Y = (β₀ + u₀ⱼ) + (β₁ + u₁ⱼ)Time + r_ij</text>
+  <text x="550" y="245" class="small-text" text-anchor="middle">Each participant has own baseline AND learning rate</text>
+  <text x="550" y="262" class="small-text" text-anchor="middle">Covariance structure: Unstructured (if converges)</text>
+  <text x="550" y="279" class="small-text" text-anchor="middle" font-weight="bold">Estimate using REML</text>
+  
+  <!-- Arrow down -->
+  <path d="M 550 290 L 550 320" class="arrow"/>
+  
+  <!-- Step 3: Compare Fit -->
+  <rect x="300" y="320" width="500" height="100" class="decision" rx="5"/>
+  <text x="550" y="343" class="title-text" text-anchor="middle">Step 3: Compare Model Fit</text>
+  <text x="550" y="363" class="small-text" text-anchor="middle">• Likelihood Ratio Test (LRT): χ² test, p &lt; .05?</text>
+  <text x="550" y="378" class="small-text" text-anchor="middle">• Akaike Information Criterion: ΔAIC &gt; 2?</text>
+  <text x="550" y="393" class="small-text" text-anchor="middle">• Bayesian Information Criterion: ΔBIC &gt; 2?</text>
+  <text x="550" y="410" class="small-text" text-anchor="middle" font-style="italic">Lower AIC/BIC indicates better fit</text>
+  
+  <!-- Fit Criteria box (right side) -->
+  <rect x="830" y="325" width="180" height="90" class="note-box" rx="5"/>
+  <text x="920" y="345" class="body-text" text-anchor="middle" font-weight="bold">Fit Criteria:</text>
+  <text x="920" y="363" class="small-text" text-anchor="middle">LRT: p &lt; .05</text>
+  <text x="920" y="378" class="small-text" text-anchor="middle">ΔAIC &gt; 2</text>
+  <text x="920" y="393" class="small-text" text-anchor="middle">ΔBIC &gt; 2</text>
+  <text x="920" y="410" class="small-text" text-anchor="middle" font-style="italic">Lower values =</text>
+  <text x="920" y="423" class="small-text" text-anchor="middle" font-style="italic">better fit</text>
+  
+  <!-- Arrow down to decision -->
+  <path d="M 550 420 L 550 460" class="arrow"/>
+  
+  <!-- Decision Diamond -->
+  <polygon points="550,460 700,520 550,580 400,520" class="decision"/>
+  <text x="550" y="515" class="body-text" text-anchor="middle">Random slope for time</text>
+  <text x="550" y="535" class="body-text" text-anchor="middle">significantly improves fit?</text>
+  <text x="550" y="552" class="small-text" text-anchor="middle">(LRT p &lt; .05 OR ΔAIC/BIC &gt; 2)</text>
+  
+  <!-- No path (left) -->
+  <path d="M 400 520 L 250 520 L 250 640" class="arrow"/>
+  <text x="360" y="515" class="body-text">No</text>
+  <text x="360" y="532" class="small-text">(Unlikely)</text>
+  
+  <!-- Random Intercepts Only outcome -->
+  <rect x="80" y="640" width="340" height="100" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="250" y="665" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Random Intercepts Only</text>
+  <text x="250" y="685" class="body-text" text-anchor="middle">Participants differ in baseline but not learning rate</text>
+  <text x="250" y="705" class="small-text" text-anchor="middle">Random intercepts model will be used in subsequent analyses</text>
+  <text x="250" y="725" class="small-text" text-anchor="middle" font-style="italic">(No random slope for time)</text>
+  
+  <!-- Yes path (right) -->
+  <path d="M 700 520 L 780 520 L 780 640" class="arrow"/>
+  <text x="730" y="515" class="body-text">Yes</text>
+  <text x="730" y="532" class="small-text">(Expected)</text>
+  
+  <!-- Retain Random Slope outcome -->
+  <rect x="610" y="640" width="340" height="130" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="780" y="665" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Retain Random Slope for Time</text>
+  <text x="780" y="685" class="body-text" text-anchor="middle">Participants have individual learning trajectories</text>
+  <text x="780" y="705" class="small-text" text-anchor="middle">Random slope will be included in all subsequent models</text>
+  <text x="780" y="722" class="small-text" text-anchor="middle" font-style="italic">Rationale: Individuals learn at different rates in training</text>
+  <text x="780" y="739" class="small-text" text-anchor="middle" font-style="italic">(theoretically expected and empirically supported)</text>
+  <text x="780" y="758" class="body-text" text-anchor="middle" font-weight="bold">Use unstructured covariance matrix</text>
+  
+  <!-- Arrow down from random slope box -->
+  <path d="M 780 770 L 780 810" class="arrow"/>
+  
+  <!-- Convergence decision -->
+  <polygon points="780,810 900,860 780,910 660,860" class="decision"/>
+  <text x="780" y="855" class="body-text" text-anchor="middle">Model with</text>
+  <text x="780" y="872" class="body-text" text-anchor="middle">unstructured</text>
+  <text x="780" y="889" class="body-text" text-anchor="middle">covariance converges?</text>
+  
+  <!-- Yes path from convergence -->
+  <path d="M 780 910 L 780 950" class="arrow"/>
+  <text x="810" y="928" class="body-text">Yes</text>
+  
+  <!-- No path from convergence -->
+  <path d="M 900 860 L 980 860 L 980 985 L 860 985" class="arrow"/>
+  <text x="920" y="855" class="body-text">No</text>
+  
+  <!-- Arrow from intercepts only -->
+  <path d="M 250 740 L 250 985 L 350 985" class="arrow"/>
+  
+  <!-- Step 4: Document -->
+  <rect x="350" y="950" width="510" height="90" class="box" rx="5"/>
+  <text x="605" y="973" class="title-text" text-anchor="middle">Step 4: Document Random Effects Structure</text>
+  <text x="605" y="993" class="small-text" text-anchor="middle">• Report model comparison results (LRT, AIC, BIC)</text>
+  <text x="605" y="1008" class="small-text" text-anchor="middle">• Specify which random effects structure will be used</text>
+  <text x="605" y="1023" class="small-text" text-anchor="middle">• Report covariance structure (unstructured or variance components)</text>
+  
+  <!-- Purple Components box - REPOSITIONED TO THE RIGHT AND NOT OVERLAPPING -->
+  <rect x="880" y="950" width="180" height="90" class="action" rx="5"/>
+  <text x="970" y="975" class="body-text" text-anchor="middle" font-weight="bold">Components</text>
+  <text x="970" y="995" class="small-text" text-anchor="middle">If unstructured fails</text>
+  <text x="970" y="1010" class="small-text" text-anchor="middle">to converge, use</text>
+  <text x="970" y="1025" class="small-text" text-anchor="middle">variance components</text>
+  <text x="970" y="1040" class="small-text" text-anchor="middle">(assumes zero</text>
+  <text x="970" y="1055" class="small-text" text-anchor="middle">covariance)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 605 1040 L 605 1080" class="arrow"/>
+  
+  <!-- Final outcome -->
+  <rect x="350" y="1080" width="510" height="50" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="605" y="1103" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Proceed to Model Comparison</text>
+  <text x="605" y="1120" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Strategy (Fixed Effects)</text>
+  
+  <!-- References box at bottom -->
+  <rect x="80" y="1160" width="980" height="80" style="fill: #fafafa; stroke: #bdbdbd; stroke-width: 1;" rx="3"/>
+  <text x="100" y="1180" class="small-text" font-weight="bold">Key References and Rationale:</text>
+  <text x="100" y="1197" class="small-text">• REML for random effects comparison: Raudenbush and Bryk (2002)</text>
+  <text x="100" y="1212" class="small-text">• Fit indices thresholds: Garson (2023) - ΔAIC/BIC &gt; 2; LRT p &lt; .05</text>
+  <text x="100" y="1227" class="small-text">• Theoretical expectation: Individuals learn at different rates in training contexts, suggesting random slopes should improve fit by capturing individual variability in learning trajectories</text>
+</svg>

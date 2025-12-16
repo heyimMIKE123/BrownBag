@@ -1,0 +1,903 @@
+---
+title: "Dissertation Proposal Stuff"
+output-file: index.html
+format:
+  revealjs:
+    embed-resources: true
+    # auto-stretch: false
+    # OPTIONAL: set scrollable globally or per-slide as needed
+    # scrollable: true
+    slide-level-classes:
+      nostretch:
+        auto-stretch: false
+title-slide-attributes:
+  data-background-image: images/doggie.png
+  data-background-size: 35%
+  data-background-position: bottom right
+
+editor: visual
+bibliography: ["references.bib", "References/references.bib", "References/military.bib", "References/other_occupations.bib", "References/gamification.bib", "References/howard.bib", "References/medical.bib", "References/assessments.bib", "References/novelty.bib", "References/prelims.bib", "References/prelims_articles.bib"]
+csl: "apa.csl"
+---
+
+## Purpose(s)
+
+::: incremental
+-   Get feedback on AI evaluation system
+
+-   Research design improvements
+
+-   Future ideas for VR-based research
+
+-   Maybe nothing? Maybe we just chill? ![](https://cdn.discordapp.com/emojis/1332917944899862600.webp?size=96&animated=true){width="64"}
+:::
+
+## High-level Research Overview
+
+. . .
+
+1.  Examine the effectiveness of AI-generated feedback in VR training programs
+    1.  Does AI-generated feedback help people learn better than alternative methods?
+    2.  Does AI-generated feedback help people learn faster?
+
+. . .
+
+2.  Understand how AI-generated feedback interacts with several individual differences
+
+## Virtual Reality
+
+"A `three dimensional` digital representation of a real or imagined space with `interactivite capabilities`" [@howard2021meta].
+
+::::: columns
+::: {.column width="50%"}
+![](images/clipboard-3864801171.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-1538693958.png){width="100%"}
+:::
+:::::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-stack
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px; color:white"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px; color:white"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px; color:white"}
+:::
+::::::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality
+
+Virtual reality programs are three-dimensional
+
+## Virtual Reality
+
+Two dimensional programs [*would not*]{style="color: red;"} be considered VR
+
+::: r-stack
+![](images/clipboard-770589495.png){.fragment .fade-in-then-out fig-align="center" width="100%"}
+
+![](images/clipboard-2674945946.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+
+![](images/clipboard-3826614018.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+:::
+
+------------------------------------------------------------------------
+
+## Virtual Reality
+
+2.5D games [*would not*]{style="color: red;"} be considered VR
+
+<!-- ![](images/clipboard-830921457.png) -->
+
+<!-- ![](images/clipboard-2306481970.png) -->
+
+::::::: r-stack
+:::::: {.fragment .fade-in-then-out data-fragment-index="1"}
+::::: columns
+::: {.column width="50%"}
+![](images/clipboard-1182490368.jpeg){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-2790716976.png){style="margin-top: 25%;" fig-align="center" width="100%"}
+:::
+:::::
+::::::
+:::::::
+
+## Virtual Reality
+
+Three dimensional videogames [*would be*]{style="color: blue;"} considered VR
+
+::: r-stack
+![](images/clipboard-3131754878.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+
+![](images/clipboard-2924878096.png){.fragment .fade-in-then-out}
+
+![](images/clipboard-1092194431.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+
+![](images/clipboard-3510240317.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+
+![](images/clipboard-370708162.png){.fragment .fade-in-then-out fig-align="center" width="1200"}
+:::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality
+
+VR users navigate their surroundings with avatars
+
+![](images/clipboard-2987174880.png)
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Comprised of `3` components:
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background:#2780e3; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+1)  **Dimensionality**
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background:#3fb618; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em; opacity:.35;"}
+2)  **Representation**
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background:#e83e8c; width:350px; height:300px; margin:10px; margin-top: 50px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1em;"}
+3)  **Influence**
+:::
+::::::
+
+## Virtual Reality {.nostretch}
+
+All VR programs allow some form of interaction
+
+![](images/interactivity_gif.gif){width="1000"}
+
+## Virtual Reality
+
+All VR programs:
+
+1.  Are three-dimensional
+2.  Have visible or implied avatars
+3.  Have some form of interactivity
+
+## VR Training
+
+The process of utilizing VR to teach various knowledge and skills to students, employees, or any other person interested in learning.
+
+## VR Training
+
+Began out of a desire to create `safe` and `cost-effective` training programs in military and medical fields [@howard2021meta; @moshell1993three; @orlansky1982cost; @mccarthy1998commercially]
+
+. . .
+
+Since this time, VR training programs have grown to fulfill a `variety of use cases` in a `multitude of industries.`
+
+## VR Training Examples
+
+@bissonnette2019artificial
+
+![](images/clipboard-303181538.png)
+
+## VR Training Examples
+
+![](images/clipboard-416633488.png){width="634"}
+
+## VR Training Examples
+
+@le2021examining
+
+![](images/clipboard-126813747.png){width="722"}
+
+## VR Training Examples
+
+@ropelato2018adaptive
+
+![](images/clipboard-1196381520.png)
+
+## VR Training Examples
+
+## ![](images/clipboard-3116247035.png)
+
+## VR Training
+
+```{r results='asis'}
+#| warning: false
+
+library(rempsyc)
+library(tidyverse)
+
+table2 <- tibble(
+  Author = c(
+    "Haque & Srinivasan (2006)",
+    "Howard & Guttworth (2020)", 
+    "Howard et al. (2021)", 
+    "F.-Q. Chen et al. (2020)"
+  ), 
+  k = c(
+  "16",
+  "23",
+  "184",
+  "12"
+  ),
+  N = c(
+  "",
+  "1530",
+  "9007",
+  "821"
+  ),
+  Domain = c(
+    "Medical", 
+    "Social Skills",
+    "Variety of Domains",
+    "Medical"
+  ),
+  Finding = c(
+    "VR training resulted in significantly less task completion time than alternative methods, with a large effect (d = −2.175, 95% CI [−3.865, −.485]).",
+    "VR training programs were more effective than alternative methods for developing social skills (d = 0.691, 95% CI [0.297, 1.085], z = 3.435, p = .001).",
+    "VR training (in general) was more effective than alternative training methods (d = 0.541, 95% CI [.450, .631], z = 11.648, p < .001 This effect grew larger when filtering by organizational training programs, d = .625.",
+    "VR training was more effective in improving knowledge (standard mean difference [SMD] = 0.58, 95% CI [.41, .75], p <.001, I2 = 47%) than alternative trainings. Both trainings were equally effective at improving skills (SMD = .01, 95% CI [–.24, .26], p =.93, I2 = 37%)."
+  )
+)
+
+# Print as a Markdown table
+nice_table(table2, title = c("Table 1", "Meta-Analytic Evidence of VR Training's Effectiveness"))
+```
+
+## Theories for VR Training's Effectiveness
+
+```{r}
+# install.packages("rempsyc")   # if needed
+library(rempsyc)
+
+# Create data frame summarizing the 3 theories
+vr_theories <- data.frame(
+  Theory = c(
+    "Immersion–Presence Theory",
+    "Task–Technology Fit",
+    "Novelty Effect"
+  ),
+  Core_Idea = c(
+    "VR’s immersive qualities (HMDs, sensory engagement, vivid environments) increase presence, which enhances attention, engagement, and learning.",
+    "Training is most effective when VR technology closely matches the real-world tasks, tools, and motor actions required.",
+    "VR’s novelty increases motivation and engagement early on, potentially elevating performance effects—though these effects may diminish over time."
+  ),
+  Key_Evidence = c(
+    "Immersion → Presence (moderate effect). Presence → higher engagement, motivation, and learning.",
+    "High task–technology fit shows significantly larger performance effects (d = .82) than moderate (d = .45) or low (d = .21).",
+    "Meta-analytic evidence shows effect sizes shrinking across years, possibly due to reduced novelty or wider application contexts."
+  ),
+  Representative_Citations = c(
+    "Slater & Wilbur (1997); Cummings & Bailenson (2016); Dubovi et al. (2017)",
+    "Goodhue & Thompson (1995); Howard et al. (2021)",
+    "Freina & Ott (2015); Pan et al. (2006); Howard et al. (2021)"
+  )
+)
+
+# Produce nice formatted table
+nice_table(
+  vr_theories,
+  highlight = TRUE,
+  title = "Summary of Theories Explaining VR Training Effectiveness"
+)
+
+```
+
+## Artificial Intelligence
+
+Artificial intelligence refers to “the development of ... machines that can simulate human intelligence and perform tasks that typically require human intelligence, such as perception, reasoning, and decision making” [@gligorea2023adaptive, p. 3]
+
+## Artificial Intelligence
+
+Can be as simple as if-then statements or decision trees...
+
+![](images/clipboard-2135126322.png)
+
+## Artificial Intelligence
+
+... or as complex as machine learning (ML), natural language processing (NLP), large language models (LLMs)
+
+![](images/clipboard-2512155422.png){width="697"}
+
+##  {.scrollable}
+
+AI is typically applied to VR training using 4 methods:
+
+::: incremental
+1.  Assessment and evaluation [@bissonnette2019artificial; @yilmaz2022continuous; @sadeghi2020development]
+
+2.  Adaptive learning systems [@ropelato2018adaptive; @lyu2021aiive]
+
+3.  Learner profiling and prediction [@bissonnette2019artificial]
+
+4.  Development of intelligent tutoring systems [@king2022automated; @chen2022robot; @sadeghi2020development; @li2020simulation]
+:::
+
+## The Role of AI in VR Training
+
+Assessment and Evaluation
+
+@yilmaz2022continuous
+
+![](images/clipboard-295584544.png)
+
+## The Role of AI in VR Training
+
+Adaptive Learning Systems
+
+@ropelato2018adaptive
+
+![](images/clipboard-1196381520.png)
+
+## The Role of AI in VR Training
+
+Profiling and Prediction
+
+@bissonnette2019artificial
+
+![](images/clipboard-303181538.png)
+
+## The Role of AI in VR Training {.scrollable}
+
+Intelligent Tutoring Systems
+
+@truong2022does
+
+![](images/clipboard-1356028027.png)
+
+@qi2021virtual
+
+![](images/clipboard-2614570107.png){width="750"}
+
+## The Role of AI in VR Training
+
+@defabiis2025 found that only 2 of 23 studies examining AI in VR training contexts assess its effects on training outcomes
+
+. . .
+
+@truong2022does and @qi2021virtual found that AI feedback improved learning outcomes compared to no feedback in specific VR training scenarios
+
+## Hypothesis
+
+*Hypothesis 1*: Trainees who receive AI-generated personalized feedback during a virtual reality training program will demonstrate higher learning outcomes than trainees who receive generic feedback, who in turn will demonstrate higher learning outcomes than trainees who receive no feedback.
+
+*Hypothesis 2:* Trainees who receive AI-generated personalized feedback during a virtual reality training program will exhibit faster learning over time than trainees who receive generic feedback or no feedback.
+
+## The VR Training Program
+
+![](images/clipboard-517823328.png)
+
+## The VR Training Program
+
+Two Training Programs:
+
+1\) Providing effective `feedback` to subordinates
+
+2\) Setting effective `goals` with subordinates
+
+. . .
+
+'Talk, show, do' format
+
+## The VR Training Program
+
+![](images/clipboard-1774793468.png)
+
+## The VR Training Program
+
+![](images/clipboard-2962311553.png)
+
+## The VR Training Program
+
+![](images/clipboard-3856899644.png)
+
+## The VR Training Program
+
+![](images/clipboard-2972824027.png)
+
+## The VR Training Program
+
+![](images/clipboard-2262851231.png)
+
+## The VR Training Program
+
+![](images/clipboard-965980945.png)
+
+## The VR Training Program: Role Play Conversational Framework
+
+![](images/clipboard-1696034890.png)
+
+## Example Conversation {.scrollable}
+
+[USER]{style="color: red;"}: Hey Amanda, why did you let that person in without scanning their membership?
+
+[NPC]{style="color: blue;"}: I'm sorry about that. It was a mistake; I let my friend in without thinking.
+
+[USER]{style="color: red;"}: That's alright, sometimes mistakes happen, it's just, you know, whether they're your friend or not, we just want to make sure we're following company policy and only letting people in with a membership. And scanning the membership is the way that we know that we're doing that. So let's just make sure from now on we're scanning memberships. Does that sound okay?
+
+[NPC]{style="color: blue;"}: Absolutely, I understand and will make sure to scan memberships from now on. Thanks for pointing that out.
+
+[USER]{style="color: red;"}: Okay, great, it sounds like we're all set here. Just maybe reflect on this conversation, just remember the importance of scanning memberships. It's not just making sure people aren't stealing from us, it's also about security, making sure that the right people are in the gym at the right time, and things like that. You know, just something to reflect on so we make sure it doesn't happen again.
+
+[NPC]{style="color: blue;"}: I completely understand, and I'll definitely keep that in mind. Thanks for the reminder.
+
+## Example Conversation 2 {.scrollable}
+
+[USER]{style="color: red;"}: Hey girl, what are those?
+
+[NPC]{style="color: blue;"}: Oh, hey! These are just some of the new promotional flyers for our upcoming gym event. Want me to grab you a copy?
+
+. . .
+
+[USER]{style="color: red;"}: Actually, I was talking about those beautiful eyes.
+
+[NPC]{style="color: blue;"}: Oh, haha, thank you! That's really sweet of you to say.
+
+. . .
+
+[USER]{style="color: red;"}: I'm not sure what you're doing after work, but I heard there's a Chuck-E-Cheese that opened up down the street if you're trying to get some pizza
+
+[NPC]{style="color: blue;"}: That sounds fun, but I’m probably just going to relax at home tonight. Thanks for the invite, though!
+
+[USER]{style="color: red;"}: Are you sure? I mean, maybe we could get some fast food instead. There's a McDonald's nearby. Maybe we could get a McFlurry. I’m saving for a Yu-Gi-Oh! LOB 1st Edition factory-sealed booster box with unweighed packs, though, so we’d have to share.
+
+[NPC]{style="color: blue;"}: I appreciate the offer, but I think I’ll stick to my original plan tonight. Thanks for thinking of me!
+
+[USER]{style="color: red;"}: You're fired.
+
+[NPC]{style="color: blue;"}: I'm sorry if I upset you in any way. Could we talk about this further?
+
+[USER]{style="color: red;"}: I don't want to talk about it. I honestly don't want to talk about it. I showed up to work in my nicest fedora and all I wanted was to share a pizza with you at Chuck E. Cheese that I would have bought with my own money. Or even a McFlurry at McDonald's. And you wouldn't do either one of those things. Do you know how that makes me feel?
+
+[NPC]{style="color: blue;"}: I’m really sorry if I hurt your feelings, that wasn't my intention at all. I’d love to discuss how we can move past this if you’re open to it.
+
+[USER]{style="color: red;"}: Please go out with me. Please. You don't know what it's like owning a fedora. I need this date. I really need this date. Please.
+
+[NPC]{style="color: blue;"}: I appreciate the invitation, and I think you're great, but I'm not interested in anything beyond friendship. I hope we can still be cool!
+
+[USER]{style="color: red;"}: Yeah, sure, we could still be cool. By the way, pack your things and get out of my gym, you're fired. Merry Christmas, you filthy animal.
+
+## The VR Training Program: AI Evaluation Framework {.scrollable}
+
+![](images/clipboard-1297886424.png)
+
+![](images/clipboard-3846953452.png)
+
+![](images/clipboard-1655204881.png)
+
+## AI Evaluation Initial Reliability and Agreement Assessment {.scrollable}
+
+![](images/clipboard-2404205227.png)
+
+![](images/clipboard-940850091.png)
+
+![](images/clipboard-3565629547.png)
+
+![](images/clipboard-535066109.png)
+
+![](images/clipboard-3334462167.png)
+
+## The VR Training Program
+
+![](images/clipboard-1283986062.png)
+
+## Feedback: No Feedback Condition
+
+![](https://cdn.discordapp.com/emojis/1332917944899862600.webp?size=96&animated=true){width="64"}
+
+## Feedback: Generic Condition {.scrollable}
+
+"Remember to make your feedback task-relevant, specific, participative, and reflective."
+
+## Feedback: AI Condition
+
+The feedback provided was task-focused and addressed the importance of scanning memberships (Task-Relevant: 5). While the user did not overtly seek participation from Amanda, they did engage her minimally by confirming understanding (Participative: 3). The feedback was generally clear, providing a specific action for improvement (scanning memberships) and explaining its importance (Specific: 4). The user encouraged reflection by discussing the broader implications of policy adherence, which is indicative of reflective feedback, though it could have been more in-depth (Reflective: 4). Overall, the feedback was effective, with some room for improvement in encouraging participative dialogue.
+
+## Feedback: AI Condition Example 2
+
+The interaction is entirely inappropriate for a professional context. The feedback given does not focus on any job-related tasks or performance but revolves solely around personal characteristics and social interactions, making it ineffective (Task-Relevant Score: 1). There is no encouragement for participation in the feedback process as the user shuts down any attempt by the NPC to engage (Participative Score: 1). The feedback lacks specificity, clear strategies, or any pertinent work-related guidance (Specific Score: 1). There is a complete absence of encouragement for self-reflection on job performance (Reflective Score: 1). Overall, the conversation is not relevant to a professional setting or feedback process.
+
+## Sample
+
+Will recruit 100 participants over the age of 18 [@maas2005sufficient]
+
+## Measures: Cognitive Ability {.scrollable}
+
+ICAR16 [@condon2014international]
+
+. . .
+
+Contains four items each from four domains: verbal reasoning, letter and number series, three-dimensional rotation, and matrix reasoning
+
+. . .
+
+`EFA` demonstrated very good fit for a four-factor solution (Root Mean Squared Error of Approximation \[RMSEA\] = `.014`, Root Mean Square of the Residual \[RMSR\] = `.01`), Tucker Lewis Index \[TLI\] = `.99`).
+
+. . .
+
+Cronbach’s alpha of .81 and an omega total of .83
+
+. . .
+
+[Concurrent and Construct Validity]{.underline}
+
+The ICAR16 was found to correlate .59 with combined SAT scores and .52 with the ACT composite score
+
+After correcting for both restricted range and reliability, the ICAR Sample Test showed correlations of .82 and .81 with the two respective composites (A and B) of the commercial cognitive ability measure, the Shipley-2.
+
+The ICAR items demonstrated the ability to differentiate based on university majors; the rank ordering of mean ICAR scores by major correlated .75 with published rank orderings of mean combined SAT scores by major, and .86 with mean combined GRE scores by major.
+
+## Measures {.scrollable}
+
+```{r}
+library(rempsyc)
+
+measures_table <- data.frame(
+  Measure = c(
+    "Conscientiousness",
+    "Novelty",
+    "Presence",
+    "Self-Efficacy",
+    "Simulation Sickness",
+    "Utility Reactions",
+    "Other Personality Variables"
+  ),
+  Instrument = c(
+    "Big Five Inventory–2 (BFI-2) Conscientiousness domain (Soto & John, 2017)",
+    "Internal VR novelty scale (current study)",
+    "iGroup Presence Questionnaire (IPQ; Schubert et al., 2001)",
+    "Internal self-efficacy for feedback and goal-setting scales (Bandura et al., 2006 guidelines)",
+    "Simulator Sickness Questionnaire (SSQ; Kennedy et al., 1993)",
+    "Internal Utility Reactions scale (current study; based on Kirkpatrick & Kirkpatrick, 1994; Alliger et al., 1997)",
+    "BFI-2 Openness, Extraversion, Agreeableness, Neuroticism (Soto & John, 2017)"
+  ),
+  `Items Facets` = c(
+    "12 items; three 4-item facets: Organization, Productiveness, Responsibility.",
+    "Multi-item internal scale. If internal consistency is inadequate, a single binary item will be used: “Are you relatively new to VR?” (yes/no).",
+    "13 items; three components: Spatial Presence (5), Involvement (4), Realness (3), plus one general presence item.",
+    "Two domain-specific scales: Feedback self-efficacy (4 items: task-relevant, participative, specific, reflective feedback) and goal-setting self-efficacy (3 items: specific/measurable goals, appropriate difficulty, participative goals).",
+    "16 items; three subscales: Nausea, Oculomotor, Disorientation (some items load on multiple subscales); Total Severity score computed from all subscales.",
+    "3 items: perceived preparation for real-world situations, perceived usefulness of skills/information, and intentions to use skills in the future.",
+    "Four 12-item domain scales for Openness, Extraversion, Agreeableness, Neuroticism (standard BFI-2 domain scales)."
+  ),
+  `Response Scale` = c(
+    "5-point scale: 1 (Disagree strongly) to 5 (Agree strongly). Content-balanced (equal true-keyed/false-keyed items).",
+    "Primary: Likert-type items (see Appendix E); internal consistency evaluated post-training. Fallback: binary yes/no item.",
+    "5-point scales with anchors varying by item type (e.g., degree of presence, involvement, realness).",
+    "11-point scale: 0 (Not confident at all) to 10 (Very confident). Rated immediately post-training for each domain.",
+    "4-point scale: 0 (None), 1 (Slight), 2 (Moderate), 3 (Severe), rated based on post-training experience.",
+    "5-point scale: 1 (Strongly disagree) to 5 (Strongly agree).",
+    "5-point scale: 1 (Disagree strongly) to 5 (Agree strongly)."
+  ),
+  `Psychometrics Notes` = c(
+    "High internal consistency; α ≈ .86–.88 across validation samples. Hierarchical facet structure designed to increase descriptive precision and predictive power.",
+    "Internal consistency (e.g., Cronbach’s α) will be estimated post-training. If reliability is inadequate, analyses will use the binary novelty item instead of the scale.",
+    "Three-component structure supported by EFA/CFA with good fit indices (e.g., RMSEA ≈ .02–.04). Factor loadings ~ .46–.88; KMO ≥ .83–.92. Replicated factor structure across heterogeneous samples and media types.",
+    "Items aligned with trained performance dimensions and corresponding BARS. Scales designed following Bandura’s guidelines for domain-specific self-efficacy; internal consistency will be assessed prior to substantive analyses.",
+    "Three-factor structure supported by factor analysis with acceptable eigenvalues and variance explained; subscales scaled to SD = 15 in calibration sample (~1,100 observations). Demonstrated utility in distinguishing high- vs. low-symptom simulators.",
+    "Constructed to assess a specific Level 1 criterion facet (utility). Prior meta-analytic work indicates utility reactions relate more strongly to learning and transfer than affective reactions such as enjoyment.",
+    "BFI-2 domains exhibit strong internal consistency and well-validated factor structure in large, diverse samples. Used as control/exploratory personality covariates."
+  )
+)
+
+nice_table(
+  measures_table,
+  title = "Summary of Individual Difference and Reaction Measures",
+  note = "BFI-2 = Big Five Inventory–2; IPQ = iGroup Presence Questionnaire; SSQ = Simulator Sickness Questionnaire. Internal scales (novelty, self-efficacy, utility) will have internal consistency evaluated prior to inclusion in primary analyses."
+)
+
+```
+
+# Data Analytic Plan
+
+## Preliminary Analyses
+
+![](images/clipboard-2250736131.png)
+
+## Preliminary Analyses
+
+![](images/clipboard-255269169.png)
+
+## Preliminary Analyses
+
+![](images/clipboard-899629200.png)
+
+## Preliminary Analyses
+
+![](images/clipboard-1832014308.png)
+
+## Preliminary Analyses
+
+```{r}
+library(rempsyc)
+library(tibble)
+
+centering_table <- tibble(
+  Variable = c(
+    "Cognitive Ability",
+    "Conscientiousness",
+    "AI Feedback",
+    "Training Principles",
+    "Time (Trial #)"
+  ),
+  Level = as.character(c(2, 2, 2, 2, 1)),
+  `Coding or Centering Strategy` = c(
+    "Grand-mean centered",
+    "Grand-mean centered",
+    "Dummy coded (0/1)",
+    "Dummy coded (0/1)",
+    "First trial = 0; subsequent trials increase by 1"
+  ),
+  Interpretation = c(
+    "0 = sample average",
+    "0 = sample average",
+    "0 = generic, 1 = AI-generated",
+    "0 = absent, 1 = present",
+    "0 = first trial"
+  )
+)
+
+nice_table(
+  centering_table,
+  title = c("Table 6", "Coding and Centering Strategy")
+)
+
+```
+
+“For every 1-unit *above the sample mean* in cognitive ability, expected performance changes by β units.”
+
+## Preliminary Analysis
+
+```{r}
+library(rempsyc)
+library(tibble)
+
+multicol_table <- tibble(
+  Statistic = c(
+    "Tolerance",
+    "Variance Inflation Factor (VIF)",
+    "Bivariate Correlation (r)"
+  ),
+  `Acceptable Range` = c(
+    "> .20",
+    "< 5",
+    "< |.70|"
+  ),
+  `Concern Threshold` = c(
+    "< .20",
+    "5–10",
+    "|.70| – |.85|"
+  ),
+  `Problematic Threshold` = c(
+    "< .10",
+    "> 10",
+    "> |.85|"
+  )
+)
+
+nice_table(
+  multicol_table,
+  title = c("Table 7", "Multicollinearity Diagnostic Criteria"),
+  note = "This will be taken for cognitive ability, conscientiousness, and relevant exploratory variables."
+)
+
+```
+
+## Preliminary Analyses
+
+![](images/clipboard-2187588040.png)
+
+## Assumptions Testing {.scrollable}
+
+```{r}
+assumptions_table <- tibble(
+  Assumption = c(
+    "Normality",
+    "Homoscedasticity",
+    "Linearity",
+    "Autocorrelation"
+  ),
+  `What is assessed` = c(
+    "Distribution of Level 1 residuals and empirical Bayes estimates of random effects (random intercepts and, if included, random slopes)",
+    "Stability of Level 1 residual variance across fitted values and time (trial number)",
+    "Functional form of the relationship between predictors (e.g., time) and the outcome at Level 1",
+    "Temporal dependence of Level 1 residuals across consecutively ordered trials within participants"
+  ),
+  `Diagnostics` = c(
+    "Q–Q plots and histograms; skewness and kurtosis statistics",
+    "Plots of standardized residuals versus fitted values and versus time",
+    "Plots of standardized residuals versus fitted values and versus time",
+    "Autocorrelation function (ACF) plots of Level 1 residuals"
+  ),
+  `Indicators of violation` = c(
+    "|skewness| > 2 or |kurtosis| > 2 and clear visual departures from normality",
+    "Funnel shapes or systematic increases/decreases in residual spread across fitted values or time",
+    "Curvature or other non-random patterns in residuals suggesting mis-specified functional form",
+    "Clearly non-zero lag-1 autocorrelation (and potentially higher lags) in ACF plots"
+  ),
+  `Potential remedies` = c(
+    "Rely on robustness of MLM; if severe, consider robust standard errors or alternative distributional families (e.g., GLMM)",
+    "Model residual variance as a function of time and/or use heteroscedasticity-consistent (robust) standard errors",
+    "Add nonlinear terms (e.g., quadratic time) or theoretically justified interactions",
+    "Add a first-order autoregressive [AR(1)] error structure and retain it only if it improves model fit (LRT, AIC, BIC)"
+  )
+)
+
+nice_table(
+  assumptions_table,
+  title = "Summary of Multilevel Model Assumptions, Diagnostics, and Remedies",
+  note = "Assumptions will be evaluated using residual- and random-effect–based diagnostics. When violations are detected, model-based and/or robust adjustments will be considered and transparently reported."
+)
+
+```
+
+## Main Analyses {.scrollable}
+
+![](images/clipboard-884493021.png)
+
+## AI-Generated Feedback x Time
+
+. . .
+
+![](images/clipboard-3637184460.png)
+
+Determines whether AI-generated feedback helps trainees improve *faster* than those who do not receive AI-generated feedback
+
+## AI-Generated Feedback x Cognitive Ability
+
+. . .
+
+![](images/clipboard-2714509756.png)
+
+Determines whether AI-generated feedback benefits lower or higher cognitive ability individuals more
+
+## Exploratory Analysis
+
+![](images/clipboard-502060257.png)
+
+## Exploratory Analyses: Performance Dimension Specificity
+
+. . .
+
+Step 1: Test AI-Generated Feedback x Performance Dimension interaction
+
+. . .
+
+Step 2: Four separate models to assess how AI-Generated feedback affects each specific performance dimension
+
+## Exploratory Analyses
+
+```{r}
+# install.packages("rempsyc")   # if needed
+library(rempsyc)
+
+# Create data frame summarizing the 3 theories
+vr_theories <- data.frame(
+  Theory = c(
+    "Immersion–Presence Theory",
+    "Task–Technology Fit",
+    "Novelty Effect"
+  ),
+  Core_Idea = c(
+    "VR’s immersive qualities (HMDs, sensory engagement, vivid environments) increase presence, which enhances attention, engagement, and learning.",
+    "Training is most effective when VR technology closely matches the real-world tasks, tools, and motor actions required.",
+    "VR’s novelty increases motivation and engagement early on, potentially elevating performance effects—though these effects may diminish over time."
+  ),
+  Key_Evidence = c(
+    "Immersion → Presence (moderate effect). Presence → higher engagement, motivation, and learning.",
+    "High task–technology fit shows significantly larger performance effects (d = .82) than moderate (d = .45) or low (d = .21).",
+    "Meta-analytic evidence shows effect sizes shrinking across years, possibly due to reduced novelty or wider application contexts."
+  ),
+  Representative_Citations = c(
+    "Slater & Wilbur (1997); Cummings & Bailenson (2016); Dubovi et al. (2017)",
+    "Goodhue & Thompson (1995); Howard et al. (2021)",
+    "Freina & Ott (2015); Pan et al. (2006); Howard et al. (2021)"
+  )
+)
+
+# Produce nice formatted table
+nice_table(
+  vr_theories,
+  highlight = TRUE,
+  title = "Summary of Theories Explaining VR Training Effectiveness"
+)
+
+```
+
+## References

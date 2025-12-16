@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1000 1100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+      .model-box { fill: #e1f5fe; stroke: #0277bd; stroke-width: 2; }
+      .calc-box { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .decision { fill: #fff9c4; stroke: #f9a825; stroke-width: 2; }
+      .interpret { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .body-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .formula-text { font-family: 'Courier New', monospace; font-size: 12px; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="title-text" text-anchor="middle" font-size="18">Preliminary Analyses: Intraclass Correlation Coefficient (ICC)</text>
+  
+  <!-- Step 1: Estimate Unconditional Model -->
+  <rect x="200" y="60" width="600" height="120" class="model-box" rx="5"/>
+  <text x="500" y="85" class="title-text" text-anchor="middle">Step 1: Estimate Unconditional Model</text>
+  <text x="500" y="105" class="body-text" text-anchor="middle">(Null model with random intercepts only)</text>
+  <text x="500" y="128" class="small-text" text-anchor="middle">• No predictors included</text>
+  <text x="500" y="145" class="small-text" text-anchor="middle">• Random intercepts for participants</text>
+  <text x="500" y="162" class="small-text" text-anchor="middle">• Partitions variance into between-person (τ₀₀) and within-person (σ²)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 180 L 500 220" class="arrow"/>
+  
+  <!-- Step 2: Extract Variance Components -->
+  <rect x="200" y="220" width="600" height="100" class="calc-box" rx="5"/>
+  <text x="500" y="245" class="title-text" text-anchor="middle">Step 2: Extract Variance Components</text>
+  <text x="500" y="270" class="body-text" text-anchor="middle">τ₀₀ = Between-person variance (Level 2)</text>
+  <text x="500" y="290" class="body-text" text-anchor="middle">σ² = Within-person/residual variance (Level 1)</text>
+  <text x="500" y="310" class="small-text" text-anchor="middle" font-style="italic">Extract from model output</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 320 L 500 360" class="arrow"/>
+  
+  <!-- Step 3: Calculate ICC -->
+  <rect x="200" y="360" width="600" height="120" class="calc-box" rx="5"/>
+  <text x="500" y="385" class="title-text" text-anchor="middle">Step 3: Calculate ICC</text>
+  <rect x="280" y="400" width="440" height="60" style="fill: #fff; stroke: #7b1fa2; stroke-width: 1;" rx="3"/>
+  <text x="500" y="425" class="formula-text" text-anchor="middle" font-size="14" font-weight="bold">ICC = τ₀₀ / (τ₀₀ + σ²)</text>
+  <text x="500" y="448" class="small-text" text-anchor="middle" font-style="italic">Proportion of total variance between participants</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 480 L 500 520" class="arrow"/>
+  
+  <!-- Decision: ICC ≥ .02? -->
+  <polygon points="500,520 670,585 500,650 330,585" class="decision"/>
+  <text x="500" y="575" class="body-text" text-anchor="middle">ICC ≥ .02?</text>
+  <text x="500" y="595" class="small-text" text-anchor="middle">(Meaningful</text>
+  <text x="500" y="610" class="small-text" text-anchor="middle">clustering)</text>
+  
+  <!-- Yes path -->
+  <path d="M 670 585 L 750 585 L 750 700" class="arrow"/>
+  <text x="720" y="580" class="body-text">Yes</text>
+  
+  <rect x="550" y="700" width="400" height="100" class="interpret" rx="5"/>
+  <text x="750" y="725" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Meaningful Clustering Detected</text>
+  <text x="750" y="748" class="body-text" text-anchor="middle" style="fill: #2e7d32;">Performance scores cluster within participants</text>
+  <text x="750" y="768" class="small-text" text-anchor="middle">Provides empirical justification for MLM</text>
+  <text x="750" y="785" class="small-text" text-anchor="middle" font-style="italic">(LeBreton &amp; Senter, 2008)</text>
+  
+  <!-- Arrow from yes to convergence -->
+  <path d="M 750 800 L 750 870 L 500 870 L 500 900" class="arrow"/>
+  
+  <!-- No path -->
+  <path d="M 330 585 L 250 585 L 250 700" class="arrow"/>
+  <text x="300" y="580" class="body-text">No</text>
+  
+  <rect x="50" y="700" width="400" height="100" class="interpret" rx="5"/>
+  <text x="250" y="725" class="title-text" text-anchor="middle">ICC &lt; .02</text>
+  <text x="250" y="748" class="body-text" text-anchor="middle">Minimal clustering, but MLM still appropriate</text>
+  <text x="250" y="768" class="small-text" text-anchor="middle">Data are nested by design (trials within participants)</text>
+  <text x="250" y="785" class="small-text" text-anchor="middle" font-style="italic">(Kreft &amp; De Leeuw, 1998)</text>
+  
+  <!-- Arrow from no to convergence -->
+  <path d="M 250 800 L 250 870 L 500 870 L 500 900" class="arrow"/>
+  
+  <!-- Convergence: Document and Proceed -->
+  <rect x="200" y="900" width="600" height="80" class="box" rx="5"/>
+  <text x="500" y="925" class="title-text" text-anchor="middle">Step 4: Document ICC Value</text>
+  <text x="500" y="948" class="body-text" text-anchor="middle">Report ICC and interpretation</text>
+  <text x="500" y="968" class="small-text" text-anchor="middle">Provides rationale for multilevel modeling approach</text>
+  
+  <!-- Arrow to end -->
+  <path d="M 500 980 L 500 1010" class="arrow"/>
+  
+  <!-- End box -->
+  <rect x="250" y="1010" width="500" height="60" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="500" y="1035" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Proceed to Random Effects</text>
+  <text x="500" y="1055" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Structure Testing</text>
+  
+  <!-- Key Information Box -->
+  <rect x="50" y="50" width="130" height="140" style="fill: #fffde7; stroke: #f9a825; stroke-width: 1;" rx="3"/>
+  <text x="115" y="70" class="small-text" text-anchor="middle" font-weight="bold">Purpose of ICC:</text>
+  <text x="60" y="90" class="small-text">• Quantifies clustering</text>
+  <text x="60" y="105" class="small-text">• Justifies MLM</text>
+  <text x="60" y="120" class="small-text">• Partitions variance</text>
+  <text x="60" y="135" class="small-text">• Informs effect size</text>
+  <text x="65" y="150" class="small-text">  interpretation</text>
+  <text x="60" y="175" class="small-text" font-weight="bold">Threshold: ≥ .02</text>
+  
+  <!-- Formula explanation box -->
+  <rect x="820" y="50" width="130" height="140" style="fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 1;" rx="3"/>
+  <text x="885" y="70" class="small-text" text-anchor="middle" font-weight="bold">ICC Formula:</text>
+  <text x="885" y="95" class="small-text" text-anchor="middle" font-weight="bold">τ₀₀</text>
+  <line x1="835" y1="100" x2="935" y2="100" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="885" y="115" class="small-text" text-anchor="middle" font-weight="bold">τ₀₀ + σ²</text>
+  <text x="830" y="135" class="small-text">τ₀₀ = Between-person</text>
+  <text x="845" y="150" class="small-text">variance (L2)</text>
+  <text x="830" y="168" class="small-text">σ² = Within-person</text>
+  <text x="845" y="183" class="small-text">variance (L1)</text>
+  
+  <!-- References footer -->
+  <rect x="50" y="1080" width="900" height="0" style="fill: none; stroke: #bdbdbd; stroke-width: 1;"/>
+  
+</svg>

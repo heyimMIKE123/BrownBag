@@ -1,0 +1,139 @@
+<svg viewBox="0 0 1000 1450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+      .level1-box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .level2-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .decision { fill: #fff9c4; stroke: #f9a825; stroke-width: 2; }
+      .action { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .note-box { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .body-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="title-text" text-anchor="middle" font-size="18">Preliminary Analyses: Descriptive Statistics and Data Screening</text>
+  
+  <!-- Important Note Box at Top -->
+  <rect x="200" y="50" width="600" height="60" class="note-box" rx="5"/>
+  <text x="500" y="72" class="body-text" text-anchor="middle" font-weight="bold" style="fill: #2e7d32;">Note: Data screening conducted on complete/imputed dataset</text>
+  <text x="500" y="92" class="small-text" text-anchor="middle" style="fill: #2e7d32;">following Missing Data Analysis (see previous section)</text>
+  
+  <!-- Arrow from note to Step 1 -->
+  <path d="M 500 110 L 500 140" class="arrow"/>
+  
+  <!-- Step 1: Calculate Descriptives -->
+  <rect x="250" y="140" width="500" height="80" class="box" rx="5"/>
+  <text x="500" y="165" class="title-text" text-anchor="middle">Step 1: Calculate Descriptive Statistics</text>
+  <text x="500" y="185" class="body-text" text-anchor="middle">Compute means, SDs, ranges for all variables</text>
+  <text x="500" y="205" class="small-text" text-anchor="middle">(Both aggregate and within-person for Level 1)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 220 L 500 250" class="arrow"/>
+  
+  <!-- Split into Level 1 and Level 2 -->
+  <rect x="50" y="250" width="400" height="100" class="level1-box" rx="5"/>
+  <text x="250" y="275" class="title-text" text-anchor="middle">Level 1 Screening</text>
+  <text x="250" y="295" class="body-text" text-anchor="middle">Performance scores and trial number</text>
+  <text x="250" y="315" class="small-text" text-anchor="middle">• Identify outliers: |z| greater than 3.29</text>
+  <text x="250" y="332" class="small-text" text-anchor="middle">• Screen with caution (genuine variability)</text>
+  
+  <rect x="550" y="250" width="400" height="100" class="level2-box" rx="5"/>
+  <text x="750" y="275" class="title-text" text-anchor="middle">Level 2 Screening</text>
+  <text x="750" y="295" class="body-text" text-anchor="middle">Ability, Conscientiousness</text>
+  <text x="750" y="315" class="small-text" text-anchor="middle">• Univariate: |z| greater than 3.29 (boxplots)</text>
+  <text x="750" y="332" class="small-text" text-anchor="middle">• Multivariate: Mahalanobis (χ², p less than .001)</text>
+  
+  <!-- Arrows converging -->
+  <path d="M 250 350 L 250 400 L 500 400" class="arrow"/>
+  <path d="M 750 350 L 750 400 L 500 400" class="arrow"/>
+  <path d="M 500 400 L 500 420" class="arrow"/>
+  
+  <!-- Step 2: Model-Based Diagnostics -->
+  <rect x="200" y="420" width="600" height="100" class="box" rx="5"/>
+  <text x="500" y="445" class="title-text" text-anchor="middle">Step 2: Model-Based Influence Diagnostics</text>
+  <text x="500" y="465" class="body-text" text-anchor="middle">(After model estimation)</text>
+  <text x="500" y="485" class="small-text" text-anchor="middle">• Cook's D, dfBeta, leverage values</text>
+  <text x="500" y="502" class="small-text" text-anchor="middle">• Plot Level-2 residuals vs. predictors (Snijders and Bosker, 2011)</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 520 L 500 550" class="arrow"/>
+  
+  <!-- Step 3: Studentized Residuals -->
+  <rect x="200" y="550" width="600" height="80" class="box" rx="5"/>
+  <text x="500" y="575" class="title-text" text-anchor="middle">Step 3: Examine Studentized Residuals</text>
+  <text x="500" y="595" class="body-text" text-anchor="middle">Flag observations: |t| greater than 2 (both levels)</text>
+  <text x="500" y="615" class="small-text" text-anchor="middle">Identify influential or poorly fit cases</text>
+  
+  <!-- Arrow down -->
+  <path d="M 500 630 L 500 660" class="arrow"/>
+  
+  <!-- Decision Diamond -->
+  <polygon points="500,660 650,720 500,780 350,720" class="decision"/>
+  <text x="500" y="715" class="body-text" text-anchor="middle">Outliers</text>
+  <text x="500" y="735" class="body-text" text-anchor="middle">Identified?</text>
+  
+  <!-- Yes path -->
+  <path d="M 650 720 L 750 720 L 750 840" class="arrow"/>
+  <text x="720" y="715" class="body-text">Yes</text>
+  
+  <!-- Outlier Investigation Box -->
+  <rect x="550" y="840" width="400" height="140" class="action" rx="5"/>
+  <text x="750" y="865" class="title-text" text-anchor="middle">Step 4a: Investigate Each Case</text>
+  <text x="750" y="888" class="small-text" text-anchor="middle">• Check for data entry errors</text>
+  <text x="750" y="905" class="small-text" text-anchor="middle">• Review AI transcripts (Level 1 outliers)</text>
+  <text x="750" y="922" class="small-text" text-anchor="middle">• Assess consistency with trajectory</text>
+  <text x="750" y="939" class="small-text" text-anchor="middle">• Consider robust estimation if needed</text>
+  <text x="750" y="956" class="body-text" text-anchor="middle" font-weight="bold">Winsorize ONLY if measurement error evident</text>
+  <text x="750" y="973" class="small-text" text-anchor="middle" font-style="italic">(Case-by-case decisions; document all)</text>
+  
+  <!-- Arrow down from investigation -->
+  <path d="M 750 980 L 750 1030" class="arrow"/>
+  
+  <!-- Sensitivity Analysis Box -->
+  <rect x="550" y="1030" width="400" height="100" class="action" rx="5"/>
+  <text x="750" y="1055" class="title-text" text-anchor="middle">Step 4b: Conduct Sensitivity Analysis</text>
+  <text x="750" y="1075" class="body-text" text-anchor="middle">Re-run analyses WITH and WITHOUT</text>
+  <text x="750" y="1092" class="body-text" text-anchor="middle">flagged/treated cases</text>
+  <text x="750" y="1112" class="small-text" text-anchor="middle">Report if conclusions differ meaningfully</text>
+  
+  <!-- Arrow from sensitivity to end -->
+  <path d="M 750 1130 L 750 1180 L 500 1180 L 500 1210" class="arrow"/>
+  
+  <!-- No path - directly to end -->
+  <path d="M 350 720 L 250 720 L 250 1180 L 500 1180 L 500 1210" class="arrow"/>
+  <text x="320" y="715" class="body-text">No</text>
+  
+  <!-- End box -->
+  <rect x="350" y="1210" width="300" height="60" class="box" rx="5" style="fill: #e8f5e9; stroke: #43a047;"/>
+  <text x="500" y="1235" class="title-text" text-anchor="middle" style="fill: #2e7d32;">Proceed to ICC Calculation</text>
+  <text x="500" y="1255" class="title-text" text-anchor="middle" style="fill: #2e7d32;">and Random Effects Structure</text>
+  
+  <!-- Legend -->
+  <text x="50" y="1320" class="body-text" font-weight="bold">Legend:</text>
+  <rect x="50" y="1330" width="30" height="20" class="level1-box"/>
+  <text x="85" y="1345" class="small-text">Level 1</text>
+  <rect x="150" y="1330" width="30" height="20" class="level2-box"/>
+  <text x="185" y="1345" class="small-text">Level 2</text>
+  <rect x="250" y="1330" width="30" height="20" class="decision"/>
+  <text x="285" y="1345" class="small-text">Decision</text>
+  <rect x="370" y="1330" width="30" height="20" class="action"/>
+  <text x="405" y="1345" class="small-text">Action/Treatment</text>
+  
+  <!-- Key Citations Box -->
+  <rect x="50" y="1370" width="900" height="120" style="fill: #fafafa; stroke: #bdbdbd; stroke-width: 1;" rx="3"/>
+  <text x="70" y="1390" class="small-text" font-weight="bold">Key References and Decision Rules:</text>
+  <text x="70" y="1408" class="small-text">• Univariate outliers: Tabachnick and Fidell (2013) - |z| greater than 3.29</text>
+  <text x="70" y="1423" class="small-text">• Multivariate outliers: Mahalanobis distance at χ² critical (p less than .001)</text>
+  <text x="70" y="1438" class="small-text">• Model diagnostics: Garson (2013); Snijders and Bosker (2011)</text>
+  <text x="70" y="1453" class="small-text">• Studentized residuals: Garson (2023)</text>
+  <text x="70" y="1468" class="small-text" font-weight="bold">• Winsorizing criterion: Only when evidence of AI/technical measurement error (e.g., speech-to-text failures),</text>
+  <text x="70" y="1483" class="small-text" font-weight="bold">  NOT for genuine performance variability. Decisions made case-by-case with full documentation.</text>
+</svg>

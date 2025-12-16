@@ -1,0 +1,147 @@
+<svg viewBox="0 0 2100 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title - Centered -->
+  <text x="1050" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">Full Role-Play Procedure</text>
+  
+  <!-- Box 1: Input -->
+  <rect x="40" y="80" width="340" height="380" fill="white" stroke="black" stroke-width="3" rx="10"/>
+  <text x="210" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">1. Input</text>
+  
+  <text x="210" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Conversational Transcript</text>
+  
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="14">
+    <tspan x="60" dy="0">USER: "I wanted to talk to</tspan>
+    <tspan x="60" dy="20">you about your recent work..."</tspan>
+  </text>
+  
+  <text x="60" y="240" font-family="Arial, sans-serif" font-size="14">
+    <tspan x="60" dy="0">NPC: "Sure, what's on your</tspan>
+    <tspan x="60" dy="20">mind?"</tspan>
+  </text>
+  
+  <text x="60" y="290" font-family="Arial, sans-serif" font-size="14">
+    <tspan x="60" dy="0">USER: "I noticed that..."</tspan>
+  </text>
+  
+  <text x="60" y="320" font-family="Arial, sans-serif" font-size="14">
+    <tspan x="60" dy="0">[Full conversation continues]</tspan>
+  </text>
+  
+  <text x="210" y="420" font-family="Arial, sans-serif" font-size="13" font-style="italic" text-anchor="middle">
+    <tspan x="210" dy="0">From 69 conversations</tspan>
+    <tspan x="210" dy="18">across 7 scenarios</tspan>
+  </text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 380 270 L 450 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Box 2: AI Evaluation -->
+  <rect x="450" y="80" width="400" height="380" fill="white" stroke="black" stroke-width="3" rx="10"/>
+  <text x="650" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">2. AI Evaluation (GPT-4o)</text>
+  
+  <!-- Prompt box -->
+  <rect x="480" y="140" width="340" height="100" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="650" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Prompt: BARS Criteria</text>
+  <text x="495" y="190" font-family="Arial, sans-serif" font-size="13">
+    <tspan x="495" dy="0">• Task-Relevant (1-5 scale)</tspan>
+    <tspan x="495" dy="18">• Participative (1-5 scale)</tspan>
+    <tspan x="495" dy="18">• Specific (1-5 scale) • Reflective (1-5 scale)</tspan>
+  </text>
+  
+  <!-- Analysis box -->
+  <rect x="480" y="260" width="340" height="80" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="650" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Analyzes Trainee Responses</text>
+  <text x="650" y="310" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Evaluates USER performance only</text>
+  
+  <text x="650" y="410" font-family="Arial, sans-serif" font-size="13" font-style="italic" text-anchor="middle">
+    <tspan x="650" dy="0">Zero-shot prompting</tspan>
+    <tspan x="650" dy="18">(no training examples)</tspan>
+  </text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 850 270 L 920 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Box 3: Scores Generated -->
+  <rect x="920" y="80" width="360" height="380" fill="white" stroke="black" stroke-width="3" rx="10"/>
+  <text x="1100" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">3. Scores Generated</text>
+  
+  <!-- 4 Dimensional Scores box -->
+  <rect x="945" y="140" width="310" height="70" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="1100" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">4 Dimensional Scores</text>
+  <text x="1100" y="190" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Task-Relevant: 4.0</text>
+  <text x="1100" y="205" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Participative: 3.5, etc.</text>
+  
+  <!-- Overall Score box -->
+  <rect x="945" y="230" width="310" height="60" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="1100" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Overall Score</text>
+  <text x="1100" y="275" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">3.75 (range: 1.00-5.00)</text>
+  
+  <!-- Feedback Text box -->
+  <rect x="945" y="310" width="310" height="80" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="1100" y="335" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Feedback Text</text>
+  <text x="955" y="360" font-family="Arial, sans-serif" font-size="13">
+    <tspan x="955" dy="0">"Trainee provided specific</tspan>
+    <tspan x="955" dy="18">examples and encouraged..."</tspan>
+  </text>
+  
+  <!-- Arrow 3 to feedback conditions -->
+  <path d="M 1280 270 L 1350 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- AI-Generated Feedback Box (Green) -->
+  <rect x="1350" y="100" width="280" height="100" fill="#90EE90" stroke="black" stroke-width="2" rx="8"/>
+  <text x="1490" y="130" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">AI-Generated Feedback</text>
+  <text x="1490" y="150" font-family="Arial, sans-serif" font-size="11" font-style="italic" text-anchor="middle">(Experimental Condition)</text>
+  <text x="1365" y="172" font-family="Arial, sans-serif" font-size="11">
+    <tspan x="1365" dy="0">Personalized, scenario-specific</tspan>
+    <tspan x="1365" dy="14">feedback based on BARS scores</tspan>
+    <tspan x="1365" dy="14">AND conversation context</tspan>
+  </text>
+  
+  <!-- Generic Feedback Box (Gray) -->
+  <rect x="1350" y="220" width="280" height="100" fill="#D3D3D3" stroke="black" stroke-width="2" rx="8"/>
+  <text x="1490" y="250" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Generic Feedback</text>
+  <text x="1490" y="270" font-family="Arial, sans-serif" font-size="11" font-style="italic" text-anchor="middle">(Control Condition)</text>
+  <text x="1365" y="292" font-family="Arial, sans-serif" font-size="11">
+    <tspan x="1365" dy="0">Standardized messages that</tspan>
+    <tspan x="1365" dy="14">do NOT adapt to individual</tspan>
+    <tspan x="1365" dy="14">performance</tspan>
+  </text>
+  
+  <!-- No Feedback Box (Red) -->
+  <rect x="1350" y="340" width="280" height="100" fill="#FFB6B6" stroke="black" stroke-width="2" rx="8"/>
+  <text x="1490" y="370" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">No Feedback</text>
+  <text x="1490" y="390" font-family="Arial, sans-serif" font-size="11" font-style="italic" text-anchor="middle">(Baseline Condition)</text>
+  <text x="1365" y="412" font-family="Arial, sans-serif" font-size="11">
+    <tspan x="1365" dy="0">No performance feedback</tspan>
+    <tspan x="1365" dy="14">provided after scenarios</tspan>
+  </text>
+  
+  <!-- Arrows from feedback conditions to final box -->
+  <path d="M 1630 150 L 1720 150 L 1720 270 L 1770 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 1630 270 L 1770 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 1630 390 L 1720 390 L 1720 270 L 1770 270" stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Final Feedback Delivery Box (Purple) - NOW TO THE RIGHT -->
+  <rect x="1770" y="190" width="280" height="160" fill="#DDA0DD" stroke="black" stroke-width="2" rx="8"/>
+  <text x="1910" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Feedback Delivered</text>
+  <text x="1910" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(or Not) to Trainee</text>
+  <text x="1785" y="285" font-family="Arial, sans-serif" font-size="12">
+    <tspan x="1785" dy="0">Trainee receives feedback</tspan>
+    <tspan x="1785" dy="16">immediately after each</tspan>
+    <tspan x="1785" dy="16">scenario, then proceeds to</tspan>
+    <tspan x="1785" dy="16">next scenario</tspan>
+  </text>
+  
+  <!-- Assess Reliability and Agreement box -->
+  <rect x="150" y="520" width="1100" height="120" fill="white" stroke="black" stroke-width="3" rx="10"/>
+  <text x="700" y="560" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Assess Reliability and Agreement</text>
+  <text x="700" y="600" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">
+    <tspan x="700" dy="0">AI scores compared to 3 trained human raters via Pearson correlations, ICCs, and percentage agreement</tspan>
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

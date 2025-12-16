@@ -1,0 +1,93 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+      .level-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      .var-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; }
+      .small-text { font-family: Arial, sans-serif; font-size: 11px; fill: #546e7a; }
+      .line { stroke: #2c3e50; stroke-width: 2; fill: none; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" class="title-text" text-anchor="middle">Multilevel Model Structure: Goal-Setting Training Program</text>
+
+  <!-- Level 2 label -->
+  <text x="50" y="80" class="level-text">Level 2</text>
+  
+  <!-- Level 2 variables -->
+  <g>
+    <!-- Participant ID -->
+    <text x="120" y="65" class="var-text">Level 2 grouping variable</text>
+    <text x="140" y="82" class="small-text">(Participant ID)</text>
+    <path d="M 180 90 L 180 200" class="arrow"/>
+  </g>
+  
+  <g>
+    <!-- AI-Feedback -->
+    <text x="250" y="75" class="var-text">Level 2</text>
+    <text x="235" y="92" class="var-text">AI-Feedback</text>
+    <path d="M 280 100 L 250 140 L 240 200" class="arrow"/>
+  </g>
+  
+  <g>
+    <!-- Training Principles -->
+    <text x="360" y="75" class="var-text">Level 2</text>
+    <text x="340" y="92" class="var-text">Training Principles</text>
+    <path d="M 390 100 L 350 140 L 280 200" class="arrow"/>
+  </g>
+  
+  <g>
+    <!-- Cognitive Ability -->
+    <text x="490" y="75" class="var-text">Level 2</text>
+    <text x="465" y="92" class="var-text">Cognitive Ability</text>
+    <path d="M 520 100 L 450 140 L 340 200" class="arrow"/>
+  </g>
+  
+  <g>
+    <!-- Conscientiousness -->
+    <text x="620" y="75" class="var-text">Level 2</text>
+    <text x="595" y="92" class="var-text">Conscientiousness</text>
+    <path d="M 650 100 L 550 140 L 400 200" class="arrow"/>
+  </g>
+
+  <!-- Level 1 label -->
+  <text x="50" y="230" class="level-text">Level 1</text>
+
+  <!-- Level 1 DV box -->
+  <rect x="140" y="200" width="160" height="60" fill="none" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="220" y="225" class="var-text" text-anchor="middle">Level 1 DV</text>
+  <text x="220" y="245" class="var-text" text-anchor="middle">Goal-Setting Performance</text>
+  
+  <!-- Level 1 predictors -->
+  <g>
+    <text x="380" y="225" class="var-text">Level 1</text>
+    <text x="380" y="245" class="var-text">Time</text>
+    <path d="M 360 230 L 300 230" class="arrow"/>
+  </g>
+  
+  <g>
+    <text x="550" y="225" class="var-text">Level 1</text>
+    <text x="520" y="245" class="var-text">Performance Item</text>
+    <path d="M 510 235 L 300 235" class="arrow"/>
+  </g>
+
+  <!-- Bottom bracket -->
+  <path d="M 180 280 L 180 320 L 700 320 L 700 280" class="line"/>
+  
+  <!-- Nested structure note -->
+  <text x="440" y="350" class="small-text" text-anchor="middle">Trials (Level 1) nested within Participants (Level 2)</text>
+  
+  <!-- BARS dimensions note -->
+  <text x="440" y="380" class="small-text" text-anchor="middle" font-style="italic">Performance = Mean of 3 BARS dimensions: Specific Goals, Appropriately Difficult Goals, Participative Goals</text>
+  
+  <!-- Random effects note -->
+  <rect x="100" y="410" width="700" height="60" fill="#f0f4f8" stroke="#2c3e50" stroke-width="1" rx="5"/>
+  <text x="450" y="430" class="var-text" text-anchor="middle" font-weight="bold">Random Effects Structure:</text>
+  <text x="450" y="450" class="small-text" text-anchor="middle">Random intercepts for participants (u₀ⱼ) + Random slopes for Time if warranted (u₁ⱼ)</text>
+  <text x="450" y="465" class="small-text" text-anchor="middle" font-style="italic">Allows each participant to have their own baseline performance and learning trajectory</text>
+</svg>
